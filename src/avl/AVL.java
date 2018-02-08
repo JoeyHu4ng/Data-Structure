@@ -26,6 +26,41 @@ public class AVL<K extends Comparable<K>> {
   }
 
   /**
+   * The function will do the clockwise rotation at curr node.
+   * @param curr is the node which will be rotated
+   */
+  public void clockwiseRotate(Node<K> curr) {
+    Node<K> parent = curr.parent;
+    if (parent != null) {
+      boolean isLeft = parent.left == curr;
+      Node<K> newCurr = curr.left;
+
+      // let parent pointer to new curr
+      if (isLeft)
+        parent.left = newCurr;
+      else
+        parent.right = newCurr;
+      newCurr.parent = parent;
+
+      // move new curr's right child to curr's left child
+      curr.left = newCurr.right;
+      newCurr.right.parent = curr;
+      // let new curr's right child pointer to curr.
+      newCurr.right = curr;
+      curr.parent = newCurr;
+    } else {
+      root = root.left;
+      root.parent.left = root.right;
+      root.right = root.parent;
+      root.parent = null;
+      if (root.right.left != null)
+        root.right.left.parent = root.right;
+      root.right.parent = root;
+    }
+
+  }
+
+  /**
    * This algorithm is based on the union algorithm taught in class.
    * This algorithm will use split and join from union algorithm.
    * The split will return three values T < k, b, and T > k, so if split, which
