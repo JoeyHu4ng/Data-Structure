@@ -4,6 +4,24 @@ public class AVL<K extends Comparable<K>> {
   Node<K> root;
 
   /**
+   * The function will search for input key and return this value.
+   * @param x is a key to search
+   * @return the value of the input key x
+   */
+  public Node<K> lookup(K x) {
+    Node<K> n = root;
+    while (n != null) {
+      int r = n.key.compareTo(x);
+      if (r == 0) {
+        return n;
+      } else {
+        n = r > 0 ? n.left : n.right;
+      }
+    }
+    return null;
+  }
+
+  /**
    * This algorithm is based on the union algorithm taught in class.
    * This algorithm will use split and join from union algorithm.
    * The split will return three values T < k, b, and T > k, so if split, which
