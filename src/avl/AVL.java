@@ -21,6 +21,10 @@ public class AVL<K extends Comparable<K>> {
     return null;
   }
 
+  public Node<K> getRoot() {
+    return root;
+  }
+
   /**
    * This algorithm is based on the union algorithm taught in class.
    * This algorithm will use split and join from union algorithm.
