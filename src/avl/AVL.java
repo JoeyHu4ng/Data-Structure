@@ -2,12 +2,6 @@ package avl;
 
 public class AVL<K extends Comparable<K>> {
   Node<K> root;
-  /* Normally this should be private or protected. But I'm doing whitebox
-     testing, I need access from the outside.
-  */
-
-  /* Whether T and V are equal sets (have the same keys/elements).
-   */
 
   /**
    * This algorithm is based on the union algorithm taught in class.
