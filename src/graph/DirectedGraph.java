@@ -11,14 +11,13 @@ public class DirectedGraphImpl {
   /**
    * Change directions of all the nodes in the graph.
    */
-  @Override
   public void reverse() {
     // create a new Edge ArrayList to store reversed Edges
     List<Edge> newEdgeList = new ArrayList<>();
     // loop through each Edge in edgeList
     for (Edge edge : edgeList) {
       // create a new Edge with reversed direction and add into newEdgeList
-      Edge newEdge = new EdgeImpl(edge.getSecondNode(), edge.getFirstNode());
+      Edge newEdge = new Edge(edge.getEnd(), edge.getStart());
       newEdgeList.add(newEdge);
     }
     // let this.edgeList pointer to reversed Edge ArrayList
@@ -48,7 +47,7 @@ public class DirectedGraphImpl {
     // initiate the result to return
     boolean result = false;
     // create a new edge newEdge to compare with edges in edgeList
-    Edge newEdge = new EdgeImpl(a, b);
+    Edge newEdge = new Edge(a, b);
     // initiate isInEdgeList to false
     boolean isInEdgeList = false;
     // loop through each edge in edgeList to check if newEdge has been in edgeList
