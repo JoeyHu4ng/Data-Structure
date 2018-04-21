@@ -17,7 +17,7 @@ public class Test {
     for (i = 1; i < 10; i++) {
       heap[i] = new Node<Integer>(20 - i * 2);
     }
-    minHeap.loadList(heap);
+    minHeap.loadList(heap, i - 1);
     minHeap.heapify();
     System.out.println(minHeap);
     while (!minHeap.isEmpty()) {

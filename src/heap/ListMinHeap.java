@@ -4,8 +4,13 @@ import avl.Node;
 
 public class ListMinHeap<K extends Comparable<K>> implements MinHeap<K> {
 
-  private Node<K>[] nodes = new Node[1000];
-  private int size = 0;
+  private Node<K>[] nodes;
+  private int size;
+
+  ListMinHeap() {
+    nodes = new Node[1000];
+    size = 0;
+  }
 
   @Override
   public void insert(K x) {
@@ -35,6 +40,10 @@ public class ListMinHeap<K extends Comparable<K>> implements MinHeap<K> {
     return size == 0;
   }
 
+  /**
+   * Typical Bubble Up algorithm.
+   * @param pos is the position to start the bubble up
+   */
   private void bubbleUp(int pos) {
     Node<K> child = nodes[pos];
     Node<K> parent = nodes[pos / 2];
@@ -45,6 +54,10 @@ public class ListMinHeap<K extends Comparable<K>> implements MinHeap<K> {
     }
   }
 
+  /**
+   * Typical Bubble Down algorithm.
+   * @param pos is the position to start the bubble down
+   */
   private void bubbleDown(int pos) {
     Node<K> curr = nodes[pos];
     Node<K> leftChild = pos * 2 <= size ? nodes[pos * 2] : nodes[pos];
@@ -63,14 +76,24 @@ public class ListMinHeap<K extends Comparable<K>> implements MinHeap<K> {
     }
   }
 
+  /**
+   * Swap the position of two Nodes.
+   * @param posOne is the first input position
+   * @param posTwo is the second input position
+   */
   private void swap(int posOne, int posTwo) {
     Node<K> tmp = nodes[posOne];
     nodes[posOne] = nodes[posTwo];
     nodes[posTwo] = tmp;
   }
 
-  public void loadList(Node<K>[] heap) {
+  /**
+   * Load the Node list into the nodes so that we could skip inserting.
+   * @param heap is Node list to load
+   */
+  public void loadList(Node<K>[] heap, int size) {
     nodes = heap;
+    this.size = size;
   }
 
   @Override
