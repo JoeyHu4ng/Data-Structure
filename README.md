@@ -11,10 +11,16 @@ https://arxiv.org/abs/1602.02120
 
 # Set
 Data-Structure DisjointSet</br>
-  method: make-set(x)</br>
-          find(x)</br>
-          union(x, y)</br>
-          contains(x)</br>
+</h5>Method:</h5>
+  make-set(x)</br>
+  find(x)</br>
+  union(x, y)</br>
+  contains(x)</br>
+
+# Heap
+Min Heap</br>
+Fibonacci Heap</br>
+
 # Graph
 The graph contains numerous Node and Edge, and graph are divided by directed graph and undirected graph.</br>
 The repo will contains basic algorithms.</br>
