@@ -11,11 +11,11 @@ https://arxiv.org/abs/1602.02120
 
 # Set
 Data-Structure DisjointSet</br>
-</h5>Method:</h5>
-  make-set(x)</br>
-  find(x)</br>
-  union(x, y)</br>
-  contains(x)</br>
+<h4>Method:</h4></br>
+make-set(x)</br>
+find(x)</br>
+union(x, y)</br>
+contains(x)</br>
 
 # Heap
 Min Heap</br>
