@@ -23,6 +23,14 @@ public class Test {
     while (!minHeap.isEmpty()) {
       System.out.println(minHeap.extractMin().key);
     }
+
+    System.out.println("--------fibonacci heap--------");
+    /* testing for fibonacci heap */
+    FibHeap fibHeap = new FibHeap();
+    for (i = 0; i < 10; i++)
+      fibHeap.insert(i * 5 + 7);
+    while (!fibHeap.isEmpty())
+      System.out.println(fibHeap.extractMin());
   }
 
 }
