@@ -102,7 +102,7 @@ public class AVL<K extends Comparable<K>> {
    * The split will return three values T < k, b, and T > k, so if split, which
    * is called by compareAVL, also return b = true, then T will have all V's keys.
    * After that we just need to make sure they have the same length, then
-   * they will be same tree; therefore, it takes O(m*lg(n/m + !)) as union did.
+   * they will be same tree; therefore, it takes O(m*lg(n/m + 1)) as union did.
    * @param T is the AVL to compare.
    * @param V is the AVL to compare with.
    * @param <K> is key which is comparable.
