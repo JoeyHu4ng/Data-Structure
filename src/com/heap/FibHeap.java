@@ -1,4 +1,4 @@
-package heap;
+package com.heap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +61,7 @@ public class FibHeap {
   }
 
   /**
-   * The function will returns the min Node and then consolidate the heap.
+   * The function will returns the min Node and then consolidate the com.heap.
    * @return the Node with the min key value
    */
   public Node extractMin() {
@@ -120,8 +120,8 @@ public class FibHeap {
   }
 
   /**
-   * The function will test if the heap is empty.
-   * @return if the heap is empty
+   * The function will test if the com.heap is empty.
+   * @return if the com.heap is empty
    */
   public boolean isEmpty() {
     return list.isEmpty();

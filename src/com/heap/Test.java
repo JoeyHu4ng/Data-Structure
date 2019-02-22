@@ -1,6 +1,6 @@
-package heap;
+package com.heap;
 
-import avl.Node;
+import com.tree.avl.Node;
 
 public class Test {
 
@@ -24,8 +24,8 @@ public class Test {
       System.out.println(minHeap.extractMin().key);
     }
 
-    System.out.println("--------fibonacci heap--------");
-    /* testing for fibonacci heap */
+    System.out.println("--------fibonacci com.heap--------");
+    /* testing for fibonacci com.heap */
     FibHeap fibHeap = new FibHeap();
     for (i = 0; i < 10; i++)
       fibHeap.insert(i * 5 + 7);

@@ -12,7 +12,7 @@ https://arxiv.org/abs/1602.02120
 # Set
 Data-Structure DisjointSet</br>
 <h4>Method:</h4>
-make-set(x)</br>
+make-com.set(x)</br>
 find(x)</br>
 union(x, y)</br>
 contains(x)</br>

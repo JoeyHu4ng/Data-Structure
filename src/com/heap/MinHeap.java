@@ -1,6 +1,6 @@
-package heap;
+package com.heap;
 
-import avl.Node;
+import com.tree.avl.Node;
 
 public interface MinHeap<K extends Comparable<K>> {
 

@@ -1,6 +1,6 @@
-package heap;
+package com.heap;
 
-import avl.Node;
+import com.tree.avl.Node;
 
 public class ListMinHeap<K extends Comparable<K>> implements MinHeap<K> {
 

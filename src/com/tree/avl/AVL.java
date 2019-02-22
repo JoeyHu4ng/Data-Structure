@@ -1,4 +1,4 @@
-package avl;
+package com.tree.avl;
 
 public class AVL<K extends Comparable<K>> {
   Node<K> root;
@@ -114,7 +114,7 @@ public class AVL<K extends Comparable<K>> {
   }
 
   /**
-   * This class represents a set of three values which are Node, boolean, and Node.
+   * This class represents a com.set of three values which are Node, boolean, and Node.
    * This is created to avoid unchecked casting warning by using list because
    * list must has same, but by dong so, and cast it to its correct type, compiler
    * will give unchecked casting warning, so this class is needed here.

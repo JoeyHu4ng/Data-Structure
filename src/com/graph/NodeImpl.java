@@ -1,4 +1,4 @@
-package graph;
+package com.graph;
 
 public class NodeImpl implements Node {
 
@@ -8,7 +8,7 @@ public class NodeImpl implements Node {
   /**
    * This is the potentially constructor which initiate nodeId based on the given int value.
    * 
-   * @param nodeId the ID to be set for this Node.
+   * @param nodeId the ID to be com.set for this Node.
    */
   public NodeImpl(int nodeId) {
     this.nodeId = nodeId;

@@ -1,4 +1,4 @@
-package graph;
+package com.graph;
 
 public class EdgeImpl implements Edge {
 
@@ -10,8 +10,8 @@ public class EdgeImpl implements Edge {
    * The function is the potentially constructor which initiated listOfNode based on two given
    * Nodes.
    * 
-   * @param firstNode first node to set.
-   * @param secondNode second node to set.
+   * @param firstNode first node to com.set.
+   * @param secondNode second node to com.set.
    */
   public EdgeImpl(Node firstNode, Node secondNode) {
     // assign two input into global variables in Edge

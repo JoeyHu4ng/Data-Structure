@@ -1,4 +1,4 @@
-package graph;
+package com.graph;
 
 public class TestTwo {
   public static void main(String[] args) throws NodeNotFoundException {
